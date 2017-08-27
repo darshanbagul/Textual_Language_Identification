@@ -23,6 +23,11 @@ Each data point (document) is a single line from a movie, and our training set h
 ```
 Id-string | Subtitle Text | Language Class
 ```
+## Requirements
+
+        Scala 2.12.1
+        Python 2.7
+        Perl 5.18
 
 ## Data Features
 
@@ -67,6 +72,8 @@ We perform **Grid Search** for hyperparameter tuning of N and λ.
 
 In order to come up with the best hyper parameter values, we train the model using different values of N (between 1 to 5) across different values of λ (0 to 5 with 0.01 increment). With each trained classifier, we predict the values for data in the validation set and store the overall accuracy of the model.
 
+![Image](https://github.com/darshanbagul/Textual_Language_Identification/blob/master/results/combine_images.jpg)
+
 We choose the best combination of N and λ, which has maximum overall accuracy on the validation set.
 
 ## Results
@@ -75,6 +82,9 @@ As it is clearly evident, **N = 3 has higher validation accuracy** compared to o
 
 **The maximum overall accuracy on the validation set was achieved for N= 3 and λ = 0.07 getting an overall accuracy of 87.16 %**
 
+The validation accuracy across individual languages are as shown below:
+
+![Image](https://github.com/darshanbagul/Textual_Language_Identification/blob/master/results/language_accuracies.png)
 
 ## Conclusions
 
